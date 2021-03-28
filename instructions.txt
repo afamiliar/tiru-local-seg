@@ -1,0 +1,37 @@
+(1) install Python 3 (if not already installed)
+
+        See: Install_Flywheel-SDK.pdf
+
+(2) install flywheel-sdk package
+
+        See: Install_Flywheel-SDK.pdf
+
+(3) generate API key in Flywheel webpage (if not done previously)
+
+        See: Install_Flywheel-SDK.pdf
+
+(4) copy & paste API key into "api_key" variable at the top of the download (fw_download.py) & upload (fw_upload.py) scripts
+
+(5) download data by running the following command:
+
+        python code/fw_download.py
+
+    If you only want to download a subset of subjects (e.g., to save space on local machine), edit subj_list.csv to only include those subjects (I suggest duplicating subj_list.csv & naming one file subj_list_orig.csv to have it as a backup).
+
+    Downloaded files can be found in data/
+
+(6) work on segmentations locally
+
+        Use ITKsnap_labels.txt
+
+    Make sure to rename new versions of the edited masks with an appropriate label (e.g., brainTumorMask_to_T1CE_edit1.nii.gz, *_edit2.nii.gz, etc.).
+
+(7) when ready, upload edited segmentation files to Flywheel with the following command:
+
+        python code/fw_upload.py
+
+    Make sure to change the "files" variable at the top of fw_upload.py to match the given file(s) you would like to upload.
+
+    Expects files to be located in subject's session directory (sub>ses>file).
+
+    If you only want to upload a subset of subjects, modify subj_list.csv as described in step #5.
