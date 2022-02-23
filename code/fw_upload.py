@@ -27,7 +27,7 @@ input_fn="subj_list.csv" # CSV file name
 fw_proj_label='Liquid_Biopsy'
 fw_group_label='d3b'
 
-files=['brainTumorMask_to_T1CE_edit1.nii.gz'] # files to upload
+files=['brainTumorMask_SRI_edit1.nii.gz'] # files to upload
 
 
 
@@ -89,7 +89,7 @@ for row in input_file:
     ## auto seg results
     for file in files:
         file_path='data/'+sub+'/'+session_label+'/'
-        acq_label='brainTumorMask_to_T1CE'
+        acq_label='brainTumorMask_SRI'
         if os.path.exists(file_path+file):
             acquisition=fw.lookup(fw_group_label+'/'+fw_proj_label+'/'+sub+'/'+session_label+'/'+acq_label)
             upload_file_to_acquistion(acquisition, file_path+file)

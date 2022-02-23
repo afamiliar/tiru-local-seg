@@ -27,7 +27,8 @@ api_key='insert-API-key-here' # Flywheel API key
 input_fn="subj_list.csv" # CSV file name
 fw_proj_label='Liquid_Biopsy'
 fw_group_label='d3b'
-files=['T1CE.nii.gz','T1_to_T1CE.nii.gz','T2_to_T1CE.nii.gz','FL_to_T1CE.nii.gz','brainTumorMask_to_T1CE.nii.gz'] # files to download
+files=['T1CE_to_SRI.nii.gz','T1_to_SRI.nii.gz','T2_to_SRI.nii.gz','FL_to_SRI.nii.gz','brainTumorMask_SRI.nii.gz'] # files to download
+# files=['T1CE.nii.gz','T1_to_T1CE.nii.gz','T2_to_T1CE.nii.gz','FL_to_T1CE.nii.gz','brainTumorMask_to_T1CE.nii.gz'] # files to download
 # include=['nifti'] # file types to include (optional, if not specified will download all available)
 # exclude=[''] # file types to exclude (optional) 
 
